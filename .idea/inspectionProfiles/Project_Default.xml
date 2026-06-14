@@ -1,0 +1,69 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="anyio" />
+          <option value="argon2-cffi" />
+          <option value="argon2-cffi-bindings" />
+          <option value="arrow" />
+          <option value="asttokens" />
+          <option value="async-lru" />
+          <option value="attrs" />
+          <option value="babel" />
+          <option value="beautifulsoup4" />
+          <option value="bleach" />
+          <option value="certifi" />
+          <option value="cffi" />
+          <option value="charset-normalizer" />
+          <option value="colorama" />
+          <option value="comm" />
+          <option value="contourpy" />
+          <option value="cycler" />
+          <option value="debugpy" />
+          <option value="exceptiongroup" />
+          <option value="httpcore" />
+          <option value="httpx" />
+          <option value="ipykernel" />
+          <option value="ipython" />
+          <option value="ipywidgets" />
+          <option value="isoduration" />
+          <option value="jedi" />
+          <option value="Jinja2" />
+          <option value="jsonschema" />
+          <option value="jsonschema-specifications" />
+          <option value="jupyter" />
+          <option value="jupyter-console" />
+          <option value="jupyter-events" />
+          <option value="jupyter-lsp" />
+          <option value="jupyter_client" />
+          <option value="jupyter_core" />
+          <option value="jupyter_server" />
+          <option value="jupyter_server_terminals" />
+          <option value="jupyterlab" />
+          <option value="jupyterlab_server" />
+          <option value="matplotlib" />
+          <option value="matplotlib-inline" />
+          <option value="mistune" />
+          <option value="nbclient" />
+          <option value="nbconvert" />
+          <option value="nbformat" />
+          <option value="notebook" />
+          <option value="notebook_shim" />
+          <option value="openpyxl" />
+          <option value="pandas" />
+          <option value="pandas-stubs" />
+          <option value="prompt_toolkit" />
+          <option value="python-dateutil" />
+          <option value="referencing" />
+          <option value="requests" />
+          <option value="rfc3339-validator" />
+          <option value="rfc3987-syntax" />
+          <option value="stack-data" />
+          <option value="terminado" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
