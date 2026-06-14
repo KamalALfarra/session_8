@@ -30,7 +30,7 @@ ax.set_ylabel('Average Turns', fontsize=12)
 ax.spines[['top','right']].set_visible(False)
 ax.legend(frameon=False)
 fig.tight_layout()
-plt.savefig('data/polt/Q1_pivot_table.png', dpi=150,
+plt.savefig('data/polt/Q1_Average_turns.png', dpi=150,
             bbox_inches='tight')
 for container in ax.containers:
     ax.bar_label(container, fmt='%.1f')
