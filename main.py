@@ -161,14 +161,49 @@ countries = (netflix['country'].dropna()
              .rename('country').to_frame())
 top10 = countries['country'].value_counts().head(10)
 fig, ax = plt.subplots(figsize=(10, 5))
-bars = ax.barh(top10.index[::-1], top10.values[::-1], color='#3D6B4F')
+bars = ax.barh(top10.index[::-1], top10.values[::-1], color='#C0392B')
 ax.bar_label(bars, padding=5)
 ax.spines[['top','right','left']].set_visible(False)
 ax.tick_params(left=False)
+fig.tight_layout()
 plt.savefig('data/polt/Q4-2_Netflix_top_countres.png', dpi=250,
             bbox_inches='tight')
+plt.close()
+
 
 ###
 # END of Q 4.2 #
 ###
+
+
+netflix['year_added'] = pd.to_datetime(
+    netflix['date_added'].str.strip(),
+    errors='coerce').dt.year
+added = (netflix
+    [netflix['year_added'].between(2013,2021)]
+    .groupby(['year_added','type']).size()
+    .reset_index(name='count'))
+wide = added.pivot(
+    index='year_added', columns='type',
+    values='count').fillna(0)
+fig, ax = plt.subplots(figsize=(9, 5))
+wide.plot(kind='bar', stacked=True, ax=ax,
+    color=['#C0392B','#1B4F72'],
+    edgecolor='white')
+ax.set_xlabel('Year'); ax.set_ylabel('Titles Added')
+ax.tick_params(axis='x', rotation=0)
+ax.legend(title='Type', frameon=False)
+ax.spines[['top','right']].set_visible(False)
+
+fig.tight_layout()
+plt.savefig('data/polt/Q4-3_Netflix_Staked_bar.png', dpi=250,
+            bbox_inches='tight')
+plt.close()
+
+
+###
+# END of Q 4.3 #
+###
+
+
 
